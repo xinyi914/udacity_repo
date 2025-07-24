@@ -120,7 +120,7 @@ def encoder_helper(df, category_lst, response):
     input:
             df: pandas dataframe
             category_lst: list of columns that contain categorical features
-            response: string of response name [optional argument that could be 
+            response: string of response name [optional argument that could be
             used for naming variables or index y column]
 
     output:
@@ -139,7 +139,7 @@ def perform_feature_engineering(df, response):
     '''
     input:
               df: pandas dataframe
-              response: string of response name [optional argument that 
+              response: string of response name [optional argument that
               could be used for naming variables or index y column]
 
     output:
@@ -355,3 +355,11 @@ def train_models(X_train, X_test, y_train, y_test):
     # save the model
     joblib.dump(cv_rfc.best_estimator_, './models/rfc.pkl')
     joblib.dump(lrc, './models/logistic_model.pkl')
+
+
+if __name__ == '__main__':
+    path = "./data/bank_data.csv"
+    df = import_data(path)
+    perform_eda(df)
+    X_train, X_test, y_train, y_test = perform_feature_engineering(df, 'Churn')
+    train_models(X_train, X_test, y_train, y_test)
