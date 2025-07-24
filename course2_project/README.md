@@ -18,7 +18,7 @@ Plots for results are stored in images/results
 Our data is in the data/bank_data.csv.
 
 Here is the structure of the project:
-<pre> ```.
+<pre> .
 ├── Guide.ipynb          # Given: Getting started and troubleshooting tips
 ├── churn_notebook.ipynb # Given: Contains the code to be refactored
 ├── churn_library.py     # ToDo: Define the functions
@@ -31,23 +31,23 @@ Here is the structure of the project:
 │   └── results
 ├── logs                 # Store logs
 └── models               # Store models
-```</pre>
+</pre>
 
 ## Running Files
 To run files:
 
 First, create a virtual environment:
-<pre> ```conda create --name churn_predict python=3.8```</pre>
-conda activate churn_predict
+<pre>conda create --name churn_predict python=3.8</pre>
+<pre>conda activate churn_predict</pre>
 
 Second, install the packages:
-python -m pip install -r requirements_py3.8.txt
+<pre>python -m pip install -r requirements_py3.8.txt</pre>
 
 Third, run unit tests:
-python churn_script_logging_and_tests.py
+<pre>python churn_script_logging_and_tests.py</pre>
 
 Finally, run model:
-python churn_library.py
+<pre>python churn_library.py</pre>
 
 Check the plot of result under images/results
 
